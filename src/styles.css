@@ -1,0 +1,395 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  font-size: sans-serif;
+}
+
+.navbar {
+  background: black;
+  color: white;
+  padding: 1rem;
+}
+.logo {
+  width: 50px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-links li {
+  margin: 0 0.5rem;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+  }
+
+  .nav-links li {
+    margin: 0 0.2rem;
+  }
+}
+
+.homePage {
+  
+}
+
+.homepageImgContainer {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+.homepageImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 60%;
+  background: rgb(35, 34, 34);
+  height: auto;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+ 
+}
+
+.left-content {
+  padding: 29px;
+}
+
+.left-content h1 {
+  width: 30px;
+}
+.left-content p {
+  width: 285px;
+  text-align: left;
+  font-weight: lighter;
+  color: rgb(235, 210, 167);
+}
+.left-content button {
+  margin-top: 5px;
+  padding: 18px 50px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.right {
+  width: 100%;
+  height: auto;
+  background-color: rgb(61, 40, 40);
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+ flex: 1;
+}
+
+.right-content {
+} */
+
+* {
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  margin: 0;
+  padding: 0;
+  font-size: sans-serif;
+}
+
+.navbar {
+  background: black;
+  color: white;
+  padding: 1rem;
+}
+
+.logo {
+  width: 50px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-links li {
+  margin: 0 0.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+  }
+
+  .nav-links li {
+    margin: 0 0.2rem;
+  }
+}
+
+.homePage {
+  position: relative; /* Position elements within the homePage container */
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.homePage img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    animation: fade 1s ease-in-out;
+  }
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+}
+
+
+
+
+
+.homepageImgContainer {
+  width: 100%;
+  flex: 1; /* Allow the container to grow to fill available space */
+}
+
+.homepageImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 4300px;
+  width: 100%;
+  padding: 0 0rem; /* Add padding to the content container */
+}
+
+.left {
+  width: 100%;
+  background: rgb(35, 34, 34);
+  color: white;
+  flex: 1;
+}
+
+.left-content {
+  padding: 2rem; /* Use rem or em units for padding */
+}
+
+.left-content h1 {
+  font-size: 2rem; /* Increase font size for headings */
+}
+
+.left-content p {
+  font-weight: lighter;
+  color: rgb(231, 202, 164);
+}
+
+.left-content button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem; /* Adjust button padding */
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.left-content button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Add hover effect */
+}
+
+.right {
+  width: 100%;
+  background-color: rgb(61, 40, 40);
+  color: white;
+  flex: 1;
+}
+
+.right-content {
+  padding: 2rem; /* Add padding to the right content */
+}
+
+.right-content-img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.overlay {
+  position: relative;
+  text-align: center;
+}
+
+.overlay h1 {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  font-size: 17px;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+}
+.overlay p {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .overlay h1 {
+    top: 0%;
+    font-size: 15px;
+  }
+  .overlay p {
+    top: 60%;
+    font-size: 10px;
+  }
+}
+
+.services {
+  width: 100%;
+  height: auto;
+  background: white;
+  color: black;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.services-title h3 {
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+.services-content {
+  padding-top: 20px;
+  display: flex;
+  gap: 20%;
+}
+
+.service-text {
+  width: 100%;
+  padding-right: 30px;
+}
+.about {
+  width: 100%;
+
+  background: white;
+}
+
+.about h2 {
+  color: black;
+  padding-top: 20px;
+  padding-left: 20px;
+  text-transform: uppercase;
+}
+.about h4 {
+  color: black;
+  padding-top: 20px;
+  padding-left: 20px;
+  text-transform: uppercase;
+}
+.about p {
+  color: black;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+.contacts {
+  padding: 2rem;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+.contacts h1 {
+  font-weight: lighter;
+}
+.contacts p {
+  text-transform: capitalize;
+  font-weight: lighter;
+  font-size: 13px;
+}
