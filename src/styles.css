@@ -393,3 +393,255 @@
   font-weight: lighter;
   font-size: 13px;
 }
+
+.social-links{
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  
+
+}
+
+.facebook {
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  border: 1px solid rgb(100, 58, 58);
+  color: #385154;
+}
+
+.whatsapp{
+  color: #385154;
+  padding: 3px;
+  width: 40px;
+  height: 40px;
+  margin-left: 7px;
+  border: 1px solid rgb(100, 58, 58);
+
+}
+
+
+
+/* style for about page */
+
+.about-container {
+  position: relative;
+  justify-content: center;
+  top: 6rem;
+  width: 100%;
+}
+
+.about-items {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.about-right {
+  padding: 60px;
+  width: 100%;
+  height: 100vh;
+  background-color: #3d3b3b;
+  color: white;
+}
+
+.about-right h5 {
+  color: #a39595;
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: lighter;
+}
+
+.about-right p {
+  margin-top: 10px;
+  color: #a39595;
+  font-size: 15px;
+}
+
+.about-left {
+  padding: 80px;
+  width: 100%;
+  height: 100vh;
+  background: white;
+}
+.about-left h3 {
+  color: #9f8e8e;
+  font-weight: lighter;
+  font-size: 30px;
+}
+.about-left p {
+  color: #9f8e8e;
+  margin-top: 10px;
+}
+
+.about-image {
+  width: 100%;
+  position: relative;
+}
+.about-image img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Adjust text color as needed */
+  text-align: center; /* Center the text horizontally */
+  z-index: 1; /* Ensure text appears above the image */
+  font-size: 16px;
+}
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 768px) {
+  .about-container {
+    top: 7rem;
+  }
+
+  .about-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-right,
+  .about-left {
+    padding: 40px;
+  }
+
+  .about-left h3 {
+    font-size: 24px;
+  }
+
+  .about-right h5 {
+    font-size: 18px;
+  }
+
+  .about-right p,
+  .about-left p {
+    font-size: 14px;
+  }
+
+  .overlay-text {
+    top: 50%;
+    font-size: 12px;
+  }
+}
+
+.animated-text, .animated-text + button {
+  opacity: 0;
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.animate, .animate + button {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+
+
+ .about-animated-text {
+  position: relative;
+  animation: slideFromLeft 2s ease-in-out;
+}
+
+@keyframes slideFromLeft {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+} 
+
+
+/* style for contact page */
+
+.contacts-container {
+  display: flex;
+}
+
+.contact-left {
+  width: 100%;
+  height: 150vh;
+  background-color: aliceblue;
+}
+.contact-right {
+  width: 100%;
+  height: 150vh;
+  background-color: rgb(70, 67, 67);
+  padding-top: 110px;
+}
+.contact-right h1 {
+  color: white;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+.contact-left-text {
+  padding-top: 150px;
+  padding-left: 40px;
+}
+.contact-left-text p {
+  width: 80%;
+}
+
+.form-container form {
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-right: 20px;
+}
+.input-field input {
+  display: block;
+  background-color: rgb(70, 67, 67);
+  border: none;
+  padding: 30px;
+}
+
+/* small screen style for contact form */
+
+@media screen and (max-width: 768px) {
+  .contacts-container {
+    flex-direction: column;
+  }
+}
+
+.input-field input::placeholder {
+  color: rgb(134, 132, 132);
+}
+
+.form-container button {
+  margin-top: 10px;
+  background-color: rgb(117, 117, 123);
+  border: none;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  cursor: pointer;
+}
+.form-container button:hover {
+  background-color: aliceblue;
+  color: #030303;
+}
+
+.input-field textarea {
+  margin-top: 15px;
+  background-color: rgb(70, 67, 67);
+  width: 100%;
+  height: 250px; /* Set the desired height */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none; /* Disable resizing */
+  color: white;
+}
