@@ -159,13 +159,21 @@ const Home = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const elementPosition = document.querySelector('.content').getBoundingClientRect().top;
+      const contentElement = document.querySelector('.content');
+      const elementPosition = contentElement.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
       
-      if (elementPosition < windowHeight * 0.75) { // Adjust threshold as needed
+      if (window.innerWidth > 768) {
+        // For larger screens, trigger animation when scrolling
+        if (elementPosition < windowHeight * 0.75) {
+          setAnimate(true);
+        }
+      } else {
+        // For smaller screens, trigger animation immediately
         setAnimate(true);
       }
-    };
+    }
+
 
     window.addEventListener('scroll', handleScroll);
 

@@ -560,6 +560,20 @@
   }
 } 
 
+/* CSS for small screens */
+@media screen and (max-width: 768px) {
+  .animated-text {
+    opacity: 1;
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+    transform: translateX(0);
+  }
+
+  .animated-text + button {
+    opacity: 1;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateX(0);
+  }
+}
 
 /* style for contact page */
 
